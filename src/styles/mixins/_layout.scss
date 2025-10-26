@@ -1,0 +1,7 @@
+@mixin flex-host($direction: row) {
+  display: flex;
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: $direction;
+}

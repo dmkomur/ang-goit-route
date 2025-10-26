@@ -1,0 +1,27 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  background-color: red;
+}
+
+.home {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  background-color: aquamarine;
+  width: 100%;
+}
+
+.workspace {
+  flex: 1 1 auto; /* ← ключ! растягивает по оставшейся ширине */
+  display: flex;
+  flex-direction: column;
+  background-color: #d0dabe;
+  padding: 16px;
+}
+.open {
+  margin-left: 260px;
+  transition: margin-left 0.3s ease;
+}

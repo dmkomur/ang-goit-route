@@ -1,0 +1,14 @@
+.sidebar-list-item {
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.active {
+  background-color: #d0dabe;
+  font-weight: bold;
+}

@@ -1,0 +1,7 @@
+<ul class="sidebar-list">
+  @for ( todo of todos; track todo.id) {
+  <app-sidebar-list-item [data]="todo"></app-sidebar-list-item>
+  } @empty {
+  <li>Нет задач</li>
+  }
+</ul>
