@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SidebarListComponent } from './sidebar-list/sidebar-list.component';
 
 @Component({
@@ -8,4 +8,6 @@ import { SidebarListComponent } from './sidebar-list/sidebar-list.component';
   styleUrl: './sidebar.component.scss',
   standalone: true,
 })
-export class SidebarComponent {}
+export class SidebarComponent {
+  @Input() isOpen = false;
+}

@@ -1,7 +1,11 @@
 <div class="home">
-  <app-sidebar [class.open]="isSidebarOpen"></app-sidebar>
+  @if (isSidebarOpen) {
+  <app-button [toggleHandler]="toggleSidebar">Close Sidebar</app-button>
+  } @else {
+  <app-button [toggleHandler]="toggleSidebar">Open Sidebar</app-button>
+  }
+  <app-sidebar [isOpen]="isSidebarOpen"></app-sidebar>
   <div class="workspace" [class.open]="isSidebarOpen">
     <router-outlet></router-outlet>
   </div>
 </div>
-

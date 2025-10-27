@@ -12,16 +12,28 @@
   flex: 1 1 auto;
   background-color: aquamarine;
   width: 100%;
+  position: relative; /* важно для absolute sidebar на мобилке */
 }
 
 .workspace {
-  flex: 1 1 auto; /* ← ключ! растягивает по оставшейся ширине */
+  flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   background-color: #d0dabe;
   padding: 16px;
 }
-.open {
-  margin-left: 260px;
-  transition: margin-left 0.3s ease;
+
+/* Десктоп: контент сдвигается при открытом sidebar */
+@media (min-width: 769px) {
+  .open {
+    margin-left: 260px;
+    transition: margin-left 0.3s ease;
+  }
+}
+
+/* Мобилка: контент не сдвигается, sidebar absolute */
+@media (max-width: 768px) {
+  .open {
+    margin-left: 0; /* не сдвигаем workspace */
+  }
 }

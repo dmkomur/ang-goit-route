@@ -1,0 +1,25 @@
+.button {
+  display: none; /* по умолчанию скрыта на десктопе */
+  padding: 16px;
+  background-color: #7fe998;
+  border: none;
+  border-radius: 8px;
+  color: rgb(68, 10, 67);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  z-index: 20;
+}
+
+.button:hover {
+  background-color: #5edc82;
+}
+
+@media screen and (max-width: 768px) {
+  .button {
+    display: block; /* показываем на мобильных */
+  }
+}
